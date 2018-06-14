@@ -1,0 +1,13 @@
+p{
+	/*Content*/
+	width:50%; 
+
+	/*Padding*/
+	padding: 10px; /*Can be set as custom by specifying top , bottom , left and right values  */
+
+	/*Border*/
+	border: 3px solid orange;
+
+	/*Margin*/
+	margin: 10px; /*Can be set as custom by specifying top , bottom , left and right values and auto can also be used */
+}

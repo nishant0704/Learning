@@ -1,0 +1,24 @@
+body{
+	background: grey;
+}
+
+h1{
+	color:violet;
+}
+
+li
+{
+	border: 3px solid black;
+}
+
+#new{
+	background: pink;
+}
+
+.few{
+	text-decoration: line-through;
+}
+
+ol li {
+	color: yellow;
+}
