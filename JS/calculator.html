@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style type="text/css">
+		body{
+			background-color: orange;
+		}
+		.container{
+			width: 300px;
+			background-color: yellow;
+			margin: 120px auto;
+		}
+		#input{
+			height:50px;
+			border:1px solid black;
+			font-size: 25px;
+		}
+		table{
+			width:75%;
+		}
+		tr{
+			width:250px;
+		}
+		td{
+			width:50%;
+		}
+		button{
+			height: 50px;
+			width:50px;
+			font-size: 15px;
+			background-color: cyan;
+			color:black;
+			outline:none;
+		}
+		input{
+			height: 50px;
+			width:50px;
+			font-size: 15px;
+		}
+		.textview{
+			width:71%;
+			height:40px;
+		}
+		form{
+			padding-left: 2px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form name="display">
+			<input class="textview" id="disp" name="textview" placeholder="0" />
+		</form>
+		<table >
+			<tr>
+				<td  class="first-row">
+					<!-- <input type="button" value="C" onclick="cl()"></input> -->
+					<button id ="myBtn" onclick="clean()">C</button>
+					<button onclick="on()">ON</button>
+					<button onclick="off()">OFF</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="elements">
+					<button class ="bttn" onclick="insert(7)">7</button>
+					<button class ="bttn" onclick="insert(8)">8</button>
+					<button class ="bttn" onclick="insert(9)">9</button>
+					<button id ="myBtn" onclick="insert('/')">/</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="elements">
+					<button onclick="insert(4)">4</button>
+					<button onclick="insert(5)">5</button>
+					<button onclick="insert(6)">6</button>
+					<button onclick="insert('*')">*</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="elements">
+					<button onclick="insert(1)">1</button>
+					<button onclick="insert(2)">2</button>
+					<button onclick="insert(3)">3</button>
+					<button onclick="insert('-')">-</button>
+				</td>
+			</tr>
+			<tr>
+				<td class="elements">
+					<button onclick="insert(0)">0</button>
+					<button onclick="insert('.')">.</button>
+					<button onclick="equal()">=</button>
+					<button onclick="insert('+')">+</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+</body>
+<script type="text/javascript">
+	function insert(num){
+		if(document.display.textview.value == 'OFF'){
+			document.display.textview.value = '';
+		}else if (document.display.textview.value == 'ON'){
+			document.display.textview.value = '';
+		}
+		document.display.textview.value = document.display.textview.value+num
+	}
+	function clean(){
+		document.display.textview.value="";
+	}
+	function equal(res){
+		var exp = document.display.textview.value;
+		if(exp){
+			document.display.textview.value = eval(exp);
+		}
+	}
+	function off(){
+		if(document.display.textview.value = "OFF"){
+			document.getElementsByClassName("bttn").disabled = true; 
+		}
+		document.display.textview.value = "OFF";
+	}
+	function on(){
+		document.display.textview.value = "ON";
+	}
+	/*function addition(argument) {
+		var val1 ='';
+		var val2 = '';
+		var res = val1 + val2;
+		equal(res);
+	}
+	function subtraction(argument) {
+		var val1 ='';
+		var val2 = '';
+		var res = val1 - val2;
+		equal(res);
+	}
+	function multiplicatiom(argument) {
+		var val1 ='';
+		var val2 = '';
+		var res = val1 * val2;
+		equal(res);
+	}
+	function division(argument) {
+		var val1 ='';
+		var val2 = '';
+		var res = val1 / val2;
+		equal(res);
+	}*/
+
+</script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Example 1</title>
+	<style>
+		.button{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body id="new">
+	<h1 id="one">Hello there</h1>
+	<p> how are you ? </p>
+	<div class = "button">
+		<button>CLICK ME</button>
+	</div>
+	<script>
+		let x = document.getElementsByTagName("body");
+		let y = document.getElementById("one")[0];
+		let z = false;
+		let div = document.querySelector("div");
+		one.style.color = "red";
+		one.style.border = "3px solid yellow";
+		one.style.fontSize = "100px";
+		let btn = document.querySelector("button");
+		btn.style.background = "purple";
+		// btn.addEventListener("click",() => { 
+		// 	if(z){
+		// 		div.style.background = "white";
+		// 	} else {
+		// 		div.style.background = "yellow";
+		// 	}
+		// 	z = !z;
+		// }); 
+		btn.addEventListener("click",() => {
+			div.classList.toggle("button");
+			}); 
+
+		//-------------------------------------------------------------------------------------------------------
+
+		// let x = document.getElementsById("body");
+		// let x = document.querySelector("body"); 
+
+		let isBlue = false;
+		setInterval( () => {
+			if(isBlue){
+				x[0].style.background = "orange";
+			} else{
+				x[0].style.background = "cyan";
+			}
+			isBlue = !isBlue;
+		},1000);
+	</script>
+</body>
+</html>
